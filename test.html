@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Styled Countdown Timer</title>
+  <style>
+    #timer-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .timer-part {
+      margin: 0 10px;
+      font-size: 24px;
+      text-align: center;
+    }
+
+    .timer-number {
+      font-weight: bold;
+      font-size: 36px;
+      color: #007bff; /* Customize the color as needed */
+    }
+
+    .timer-label {
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div id="timer-container"></div>
+
+  <script>
+    const targetDate = new Date(2024, 1, 14, 12, 0, 0); // February 14, 2024, 12:00:00
+
+    function createTimerPart(label, value) {
+      const partContainer = document.createElement('div');
+      partContainer.classList.add('timer-part');
+
+      const number = document.createElement('div');
+      number.classList.add('timer-number');
+      number.textContent = value;
+
+      const labelElement = document.createElement('div');
+      labelElement.classList.add('timer-label');
+      labelElement.textContent = label;
+
+      partContainer.appendChild(number);
+      partContainer.appendChild(labelElement);
+
+      return partContainer;
+    }
+
+    function updateTimer() {
+      const currentDate = new Date();
+      const timeDifference = targetDate - currentDate;
+
+      if (timeDifference <= 0) {
+        clearInterval(timerInterval);
+        document.getElementById('timer-container').textContent = '00:00:00';
+      } else {
+        const seconds = Math.floor((timeDifference / 1000) % 60);
+        const minutes = Math.floor((timeDifference / 1000 / 60) % 60);
+        const hours = Math.floor((timeDifference / (1000 * 60 * 60)) % 24);
+        const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+
+        const timerContainer = document.getElementById('timer-container');
+        timerContainer.innerHTML = ''; // Clear previous content
+
+        // Create and append individual timer parts
+        timerContainer.appendChild(createTimerPart('Days', pad(days)));
+        timerContainer.appendChild(createTimerPart('Hours', pad(hours)));
+        timerContainer.appendChild(createTimerPart('Minutes', pad(minutes)));
+        timerContainer.appendChild(createTimerPart('Seconds', pad(seconds)));
+      }
+    }
+
+    function pad(number) {
+      return number < 10 ? '0' + number : number;
+    }
+
+    // Update the timer every second
+    const timerInterval = setInterval(updateTimer, 1000);
+
+    // Initial call to update the timer immediately
+    updateTimer();
+  </script>
+</body>
+</html>

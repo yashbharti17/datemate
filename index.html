@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Landing Page</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Marcellus&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="90">
+  <!-- navbar section -->
+  <header class="header_wrapper">
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#" style="color: white;">
+          DateMate
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-stream"></i>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav menu-navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">Form</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Services">Steps</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    </nav>
+  </header>
+
+  <!-- Banner section -->
+  <section id="home" class="banner_wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col lg-7 order-lg-1 order-2 banner-content">
+          <h2 class="text-uppercase position-relative">This Valentine</h2>
+          <h1 class="text-uppercase">No More</h1>
+          <h1 class="text-uppercase">Singleness!</h1>
+          <h5>Start meeting the singles who are ready to <br>commit today</h5>
+          <div class="mt-5">
+            <a class="main-btn primary-btn" href="#">Get Started</a>
+          </div>
+        </div>
+        <div class="col-lg-5 order-lg-2 order-1">
+          <div class="top-right-img">
+            <img src="images/Asset 1.png" class="img-fluid">
+          </div>
+        </div>
+      </div>
+  </section>
+  <section id="Services" class="services_wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 text-center mb-5">
+          <h3>Find Your True Love</h3>
+        </div>
+        <form id="contactform" class="row g-3" method="post"
+          action="https://script.google.com/macros/s/AKfycbxYUevIbHZ5O6gltG0zR6ZXuk8cLszC0TxtE6VlS_C2QjUiVxG2WTgRdthN9vVEYxBvHQ/exec"
+          name="contact-form">
+          <div class="col-md-6 col-sm-4 col-4">
+            <label for="inputName" class="form-label">Name</label>
+            <input type="text" class="form-control" id="inputName" name="inputName" placeholder="Enter Your Name">
+          </div>
+          <div class="col-md-6 col-sm-4 col-4">
+            <label for="inputgender" class="form-label">I am</label>
+            <select id="inputgender" class="form-select" name="inputgender">
+              <option selected>Male</option>
+              <option>Female</option>
+            </select>
+          </div>
+          <div class="col-md-6 col-sm-4 col-4">
+            <label for="outputgender" class="form-label">Looking For</label>
+            <select id="outputgender" class="form-select" name="outputgender">
+              <option selected>Female</option>
+              <option>Male</option>
+            </select>
+          </div>
+          <div class="col-md-6 col-sm-4 col-4">
+            <label for="Branch" class="form-label">Branch</label>
+            <select id="Branch" class="form-select" name="Branch">
+              <option selected>CSE</option>
+              <option>CST</option>
+              <option>IT</option>
+              <option>AI</option>
+              <option>ECE</option>
+              <option>EEE</option>
+              <option>ITE</option>
+              <option>MAE</option>
+              <option>ME</option>
+              <option>CE</option>
+            </select>
+          </div>
+          <div class="col-md-6 col-sm-4 col-4">
+            <label for="Year" class="form-label">Year</label>
+            <select id="Year" class="form-select" name="Year">
+              <option selected>1st</option>
+              <option>2nd</option>
+              <option>3rd</option>
+              <option>4th</option>
+            </select>
+          </div>
+          <div class="col-md-6 col-sm-4 col-4">
+            <label for="inputid" class="form-label">Instagram Id</label>
+            <input type="text" class="form-control" id="inputid" name="inputid" placeholder="Username">
+          </div>
+          <div class="col-md-6 col-sm-4 col-4">
+            <label for="CrushName" class="form-label">Crush Name</label>
+            <input type="text" class="form-control" id="CrushName" name="CrushName"
+              placeholder="Enter Your crush's name">
+          </div>
+          <div class="col-md-6 col-sm-4 col-4">
+            <label for="CrushYear" class="form-label">Crush's Year</label>
+            <select id="CrushYear" class="form-select" name="CrushYear">
+              <option selected>1st</option>
+              <option>2nd</option>
+              <option>3rd</option>
+              <option>4th</option>
+            </select>
+          </div>
+          <div class="col-md-6 col-sm-4 col-4">
+            <label for="asnwer" class="form-label">Want to go on a date?</label>
+            <select id="answer" class="form-select" name="answer">
+              <option selected>Yes</option>
+              <option>No</option>
+            </select>
+          </div>
+          <div class="col-md-6 col-sm-4 col-4">
+            <label for="Message" class="form-label">Message For Your Crush</label>
+            <input type="text" class="form-control" id="Message" name="Message" placeholder="Message...">
+          </div>
+          <div class="col-12">
+            <button type="submit" id="sub" class="btn btn-primary">Find Your Partner</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    </div>
+  </section>
+  <section id="contact" class="footer_wrapper mt-3 mt-md-0">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 newsletter text-center px-4">
+          <div>
+            <h3 style="color: #213366;">Time Left for the List</h3>
+            <div id="timer-container"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="contact" class="footer_wrapper_one mt-3 mt-md-0">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 newsletter text-center px-4">
+          <div>
+            <h3 class="text-capitalize" style="    color: #213366;
+            font-family: MyCustomFont;
+            font-size: 80px;
+            font-weight: 100;
+            padding-bottom: 22px;
+        ">Steps to follow</h3>
+          </div>
+          <div>
+            <h4>1. Fill the form genuinely for the right match</h4>
+            <h4>2. Wait for the match</h4>
+            <h4>3. Matching list will be published on valentine's day morning</h4>
+            <h4>4. Meet  your soulmate from the matching List</h4>
+            <h4>5. Enjoy spending time with each other</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
